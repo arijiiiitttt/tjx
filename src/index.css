@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+html, body, #root { height: 100%; }
+body {
+  @apply bg-bg text-ink antialiased;
+  /* darker-than-default body copy for clean, readable black-on-light text */
+  font-family: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: 'tnum' 1, 'cv11' 1;
+}
+::selection { background: #3457e633; }
+*:focus-visible { outline: 2px solid #3457e6; outline-offset: 2px; border-radius: 4px; }
+input[type='range'] { accent-color: #8b9cff; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: #d7dbe3; border-radius: 8px; }
+.grid-thumbs { display: grid; grid-template-columns: repeat(auto-fill, minmax(72px, 1fr)); gap: 6px; }
+.cv-auto { content-visibility: auto; contain-intrinsic-size: 72px 72px; }
+@media (prefers-reduced-motion: reduce) { * { animation-duration: .001ms !important; transition-duration: .001ms !important; } }
